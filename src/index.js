@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import './styles.scss';
+import './index.scss';
 import List from './list/list';
 import User from './about/about';
 

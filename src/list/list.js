@@ -8,7 +8,7 @@ import Pagination from './components/Pagination';
 
 class List extends Component {
   componentDidMount() {
-    this.props.getUsers(this.props.sinceNext);
+    this.props.getUsers(this.props.sinceCurent);
   }
 
   static renderUsers(users) {
@@ -34,13 +34,13 @@ class List extends Component {
 List.propTypes = {
   getUsers: PropTypes.func,
   users: PropTypes.arrayOf(PropTypes.object),
-  sinceNext: PropTypes.number
+  sinceCurent: PropTypes.number
 };
 
 const mapStateToProps = (state) => {
   return {
     users: state.list.users,
-    sinceNext: state.list.sinceNext
+    sinceCurent: state.list.sinceCurent
   };
 };
 

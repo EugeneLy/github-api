@@ -1,8 +1,8 @@
 import api from './api';
 
-export function getUsers() {
+export function getUsers(sinceCurent) {
   return (dispatch) => {
-    api.fetchUsers().then((response) => {
+    api.fetchUsers(sinceCurent).then((response) => {
       dispatch({
         type: 'LOAD_USERS_SUCCESS',
         payload: {
